@@ -34,6 +34,7 @@ clc;
 input_sol = input(['Type a string (not longer than 15 chars.) - ' ...
   '(default: "Hello EDA world!"): '], "s");
 
+# Checking / Setting input data
 if ( strcmp(input_sol,"") == 1 )
   global solution = toascii("Hello EDA world!");
 else
@@ -44,7 +45,7 @@ sol_length = length(solution);
 sol_number = 200;
 sol_elite  = 0;
 
-## k Best individuals selected
+## k: Best individuals selected
 k = sol_number * 0.1;
 ## Requested standard deviation
 req_std_dev = 0.1;

@@ -1,4 +1,5 @@
 function [ best_solutions ] = eda(init_pop, k, max_std_dev, f)
+
   #
   # Variables
   #
@@ -43,7 +44,7 @@ function [ best_solutions ] = eda(init_pop, k, max_std_dev, f)
       std_devs(i) = std( sol_bestk(:,i) );
     endfor
 
-    # Best mu and std -- "mepa que esto no va"
+    # Best mu and std --
     [best_mu_sort, best_mu_idx] = sort(mus, 'ascend');
     best_mu      = mus( best_mu_idx(1) );
     best_std_dev = std_devs( best_mu_idx(1) );

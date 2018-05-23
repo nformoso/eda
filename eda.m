@@ -49,7 +49,7 @@ function [ best_solutions ] = eda(init_pop, k, max_std_dev, f)
     best_std_dev = std_devs( best_mu_idx(1) );
 
     # Generate new population
-    population = gen_population_v2(mus, std_devs, sol_num, sol_length);
+    population = gen_population(mus, std_devs, sol_num, sol_length);
 
     # Evaluate new population
     for i = 1:sol_num

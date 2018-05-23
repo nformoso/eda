@@ -5,8 +5,7 @@
 # Author: Nico Formoso (nicolasformoso@gmail.com)           #
 #                                                           #
 # Purpose:                                                  #
-#     This EDA implementation was done with study purposes. #
-#                                                           #
+#     This EDA implementation was done for study purposes.  #
 #                                                           #
 # Usage:                                                    #
 #       1- Clone / Download                                 #
@@ -22,11 +21,13 @@
 #          knowing limitations), rendering long text may    #
 #          produce problems with output text visualization. #
 #############################################################
+
 #
-# Cleaning environment
+# Cleaning data
 #
 clear;
 clc;
+
 #
 # Variables
 #
@@ -47,19 +48,22 @@ sol_elite  = 0;
 k = sol_number * 0.1;
 ## Requested standard deviation
 req_std_dev = 0.1;
+
 #
 # Evaluation function
 #
-# f_eval = @hamming_dist; # bad solution
 f_eval = @squared_dist;
+
 #
 # Initial Population
 #
 initial_pop = set_initial_pop(sol_number, sol_length);
+
 #
 # Eda
 #
 [ best_solutions ]= eda(initial_pop, k, req_std_dev, f_eval);
+
 #
 # Drawing
 #

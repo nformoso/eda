@@ -18,7 +18,8 @@ function draw_eda( solutions )
       grid off;
       text(0, 0.5, ch, 'fontsize', 20 );
     endfor
-    # 'pause' is essential. Permits the correct display of the current string
+    # 'pause' is essential. 
+    # Permits the correct display of the current string
     pause(0.01);
     refreshdata();
   endfor
